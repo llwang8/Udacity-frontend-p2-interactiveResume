@@ -1,3 +1,5 @@
+// Udacity - Resume Project -->
+
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
@@ -127,6 +129,24 @@ $("#main").append(internationalizedButton);
 var projects = {
 	"projs": [
 		{
+			"title": "Infinite Web Design Studio",
+			"dates": "2016",
+			"description": "I built my home page using JavaScript, jQuery, HTML, CSS, Bootstrap.   I had inspirations from working on projects from free code camp and Udacity.  It is a online showcase of my projects.",
+			"images":[]
+		},
+		{
+			"title": "Random Quote Machine",
+			"dates": "2016",
+			"description": "I built this responsive quote machine using JavaScript, jQuery, HTML, CSS.  It shows new quote together with page style changed when "new quote" button is clicked.  It can share quote via twitter or Facebook.  Most of the quotes come from http://brainyquote.com.",
+			"images":[]
+		},
+		{
+			"title": "My Online Interactive Resume",
+			"dates": "2016",
+			"description": "I developed my online resume using JavaScript, jQuery, JSON, HTML, CSS, Bootstrap and Google Map JavaScript Api. This is  an interactive resume application that can read my resume content from a JSON file and dynamically display resume JSON content within a built template.",
+			"images":[]
+		},
+		{
 			"title": "Ruby Rampup Projects",
 			"dates": "2015",
 			"description": "Blackjack Game, Game Of Life, League Point Calculator, NYC Restaurant Health Check.",
@@ -136,7 +156,7 @@ var projects = {
 			"title": "ResourcesXchange",
 			"dates": "2015",
 			"description": "Rails app - Follow Michael Hartl's ruby on rails tutorial and build a Twitter clone in rails plus more add-on features.",
-			"images":["images/ResourcesXchange.png"]	
+			"images":["images/ResourcesXchange.png"]
 		},
 		{
 			"title": "Send Twilio Message",
@@ -177,6 +197,14 @@ projects.display();
 
 var education = {
 	"schools": [
+		{
+		"name": "Udacity.com",
+		"location": "San Francisco, CA",
+		"degree": "Nanodegree",
+		"major": "Web Development",
+		"dates": "December 2015 to Present",
+		"url": "https://www.udacity.com/nanodegree"
+	},
 	{
 		"name": "Startup Institute",
 		"location": "New York, NY",
@@ -213,10 +241,28 @@ var education = {
 
 	"onlineClasses": [
 		{
+			"title": "Object-Oriented JavaScript",
+			"school": "Udacity.com",
+			"dates": "February 2016",
+			"url": "https://www.udacity.com/courses/ud015"
+		},
+		{
+			"title": "Responsive Images",
+			"school": "Udacity.com",
+			"dates": "February 2016",
+			"url": "https://www.udacity.com/courses/ud882"
+		},
+		{
+			"title": "Responsive Web Design Fundamental",
+			"school": "Udacity.com",
+			"dates": "February 2016",
+			"url": "https://www.udacity.com/courses/ud893"
+		},
+		{
 			"title": "JavaScript Basics - Resume Project",
 			"school": "Udacity.com",
 			"dates": "January 2016",
-			"url": "https://www.udacity.com/course/viewer#!/c-ud804/l-1930528550/e-1935058561/m-2948908664"
+			"url": "https://www.udacity.com/courses/ud804"
 		},
 		{
 			"title": "HTML",
@@ -245,7 +291,7 @@ var education = {
 		{
 			"title": "Ruby",
 			"school": "RubyMonk.com",
-			"dates": "October 2015 to Present",
+			"dates": "October 2015 to January 2016",
 			"url": "https://rubymonk.com"
 		},
 		{
@@ -260,7 +306,7 @@ var education = {
 			"dates": "Novermer 2015",
 			"url": "https://rubymonk.com"
 		}
-		
+
 
 
 	]
@@ -271,8 +317,8 @@ education.display = function() {
 	$("#education").append(HTMLschoolStart);
 	for (var sch in education.schools) {
 		HTMLschoolName = HTMLschoolName.replace("%data%", education.schools[sch].name);
-		HTMLschoolName = HTMLschoolName.replace("#", education.schools[sch].url);	
-		
+		HTMLschoolName = HTMLschoolName.replace("#", education.schools[sch].url);
+
 		$(".education-entry:last").append(HTMLschoolName.concat(HTMLschoolDegree.replace("%data%", education.schools[sch].degree)));
 		$(".education-entry:last").append(HTMLschoolDates.replace("%data%", education.schools[sch].dates));
 		$(".education-entry:last").append(HTMLschoolLocation.replace("%data%", education.schools[sch].location));
