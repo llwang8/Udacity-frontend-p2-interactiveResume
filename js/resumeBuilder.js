@@ -137,7 +137,7 @@ var projects = {
 		{
 			"title": "Random Quote Machine",
 			"dates": "2016",
-			"description": "I built this responsive quote machine using JavaScript, jQuery, HTML, CSS.  It shows new quote together with page style changed when "new quote" button is clicked.  It can share quote via twitter or Facebook.  Most of the quotes come from http://brainyquote.com.",
+			"description": "I built this responsive quote machine using JavaScript, jQuery, HTML, CSS.  It shows new quote together with page style changed when \"new quote\" button is clicked.  It can share quote via twitter or Facebook.  Most of the quotes come from http://brainyquote.com.",
 			"images":[]
 		},
 		{
