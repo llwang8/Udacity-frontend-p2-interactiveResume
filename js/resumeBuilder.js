@@ -265,46 +265,42 @@ $(function(){
 
 	var view = {
 		init: {
-
-			 var HTMLheaderName = HTMLheaderName.replace("%data%", model.bio.name);
-			 var HTMLheaderRole = HTMLheaderRole.replace("%data%", model.bio.role);
-			 $("#header").prepend(HTMLheaderRole);
-			 $("#header").prepend(HTMLheaderName);
-
-			 $("#topContacts").append(HTMLemail.replace("%data%", model.bio.contacts.email));
-			 $("#topContacts").append(HTMLgithub.replace("%data%", model.bio.contacts.github));
-			 $("#topContacts").append(HTMLtwitter.replace("%data%", model.bio.contacts.twitter));
-			 $("#topContacts").append(HTMLlocation.replace("%data%", model.bio.contacts.location));
-			 $("#header").append(HTMLbioPic.replace("%data%", "images/selfie4.jpg"));
-			 $("#header").append(HTMLwelcomeMsg.replace("%data%", model.bio.welcomeMsg));
-
-			var internationalizedButton = '<input type="button" value="Internationalize Name" onClick=inName(HTMLheaderName)>';
-			$("#main").append(internationalizedButton);
-
-
-			if (model.bio.skills != []) {
-			 	$("#header").append(HTMLskillsStart);
-
-			 	for (var i = 0, len = model.bio.skills.length; i < len; i ++) {
-			 		$("#skills").append(HTMLskills.replace("%data%", model.bio.skills[i]));
-			 		HTMLskills = HTMLskills.replace(model.bio.skills[i], "%data%");
-			 	}
-			}
-
-			$("#mapDiv").append(googleMap);
-
-
-			$("#footerContacts").append(HTMLemail.replace("%data%", model.bio.contacts.email));
-			$("#footerContacts").append(HTMLgithub.replace("%data%", model.bio.contacts.github));
-			$("#footerContacts").append(HTMLtwitter.replace("%data%", model.bio.contacts.twitter));
-			$("#footerContacts").append(HTMLlocation.replace("%data%", model.bio.contacts.location));
-
+			this.render.displayBio();
 			this.render.displayWork();
 			this.render.displayProjects();
 			this.render.displayEducation();
+			this.render.displayFooter();
 		},
 
 		render: {
+			displayBio: function(){
+				 var name = octopus.inName(model.bio.name);
+				 var HTMLheaderName = HTMLheaderName.replace("%data%", name);
+				 var HTMLheaderRole = HTMLheaderRole.replace("%data%", model.bio.role);
+				 $("#header").prepend(HTMLheaderRole);
+				 $("#header").prepend(HTMLheaderName);
+
+				 $("#topContacts").append(HTMLemail.replace("%data%", model.bio.contacts.email));
+				 $("#topContacts").append(HTMLgithub.replace("%data%", model.bio.contacts.github));
+				 $("#topContacts").append(HTMLtwitter.replace("%data%", model.bio.contacts.twitter));
+				 $("#topContacts").append(HTMLlocation.replace("%data%", model.bio.contacts.location));
+				 $("#header").append(HTMLbioPic.replace("%data%", "images/selfie4.jpg"));
+				 $("#header").append(HTMLwelcomeMsg.replace("%data%", model.bio.welcomeMsg));
+
+				var internationalizedButton = '<input type="button" value="Internationalize Name" onClick=inName(HTMLheaderName)>';
+				$("#main").append(internationalizedButton);
+
+
+				if (model.bio.skills != []) {
+				 	$("#header").append(HTMLskillsStart);
+
+				 	for (var i = 0, len = model.bio.skills.length; i < len; i ++) {
+				 		$("#skills").append(HTMLskills.replace("%data%", model.bio.skills[i]));
+				 		HTMLskills = HTMLskills.replace(model.bio.skills[i], "%data%");
+				 	}
+				}
+			},
+
 			displayWork: function() {
 				if (model.work.jobs.length > 1) {
 					for (job in work.jobs) {
@@ -361,9 +357,16 @@ $(function(){
 					HTMLonlineTitle = HTMLonlineTitle.replace(model.education.onlineClasses[online].url, "#");
 
 				}
+			},
+
+			displayFooter: function(){
+				$("#mapDiv").append(googleMap);
+				$("#footerContacts").append(HTMLemail.replace("%data%", model.bio.contacts.email));
+				$("#footerContacts").append(HTMLgithub.replace("%data%", model.bio.contacts.github));
+				$("#footerContacts").append(HTMLtwitter.replace("%data%", model.bio.contacts.twitter));
+				$("#footerContacts").append(HTMLlocation.replace("%data%", model.bio.contacts.location));
+
 			}
-
-
 
 		}
 
