@@ -283,8 +283,10 @@
 
 			};
 
-
+				 //console.log(bio.name);
 				 var name = inName(bio.name);
+				 //console.log(name);
+
 				 var HTMLheaderName = HTMLheaderName.replace("%data%", name);
 				 var HTMLheaderRole = HTMLheaderRole.replace("%data%", bio.role);
 				 $("#header").prepend(HTMLheaderRole);

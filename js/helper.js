@@ -1,8 +1,6 @@
 /*
 
-*/
-
-lace the %data% placeholder text you see in them.
+relace the %data% placeholder
 */
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span><hr>';
