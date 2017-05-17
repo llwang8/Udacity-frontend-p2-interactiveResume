@@ -2,15 +2,7 @@
 
 # JavaScript Basic
 
-This course makes introduction to the world of data analysis. I learned how to go through the entire data analysis process, which includes:
-
-Posing a question
-Wrangling your data into a format you can use and fixing any problems with it
-Exploring the data, finding patterns in it, and building your intuition about it
-Drawing conclusions and/or making predictions
-Communicating your findings
-
-I also learn how to use the Python libraries NumPy, Pandas, and Matplotlib to write code that's cleaner, more concise, and runs faster.
+In this course, I explore the JavaScript programming language by creating an interactive version of my résumé. I learn the JavaScript programming fundamentals I need while building new elements and sections to enhance my résumé.
 
 
 ## Project - Interactive Resume
