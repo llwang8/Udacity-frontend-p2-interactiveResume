@@ -1,6 +1,6 @@
-## Udacity Data Analyst Nanodegree
+## Udacity Data Analyst and Frontend Nanodegrees
 
-# Intro to Data Analysis
+# JavaScript Basic
 
 This course makes introduction to the world of data analysis. I learned how to go through the entire data analysis process, which includes:
 
